@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.20)
+project(A_Implicit LANGUAGES CXX)
+set(SDK "${CMAKE_CURRENT_SOURCE_DIR}/../A_Dynamic/SDK")
+add_executable(ImplicitTest main.cpp)
+target_compile_features(ImplicitTest PRIVATE cxx_std_20)
+target_compile_definitions(ImplicitTest PRIVATE COMBI_IMPORTS)
+target_include_directories(ImplicitTest PRIVATE "${SDK}/include")
+target_link_libraries(ImplicitTest PRIVATE "${SDK}/lib/Combinatorics.lib")
+add_custom_command(TARGET ImplicitTest POST_BUILD
+ COMMAND ${CMAKE_COMMAND} -E copy_if_different "${SDK}/bin/Combinatorics.dll" "$<TARGET_FILE_DIR:ImplicitTest>")

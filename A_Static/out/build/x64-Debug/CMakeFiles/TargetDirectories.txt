@@ -1,0 +1,4 @@
+D:/тпп/Lab4_Variant12_StudentA/A_Static/out/build/x64-Debug/CMakeFiles/CombinatoricsStatic.dir
+D:/тпп/Lab4_Variant12_StudentA/A_Static/out/build/x64-Debug/CMakeFiles/StaticTest.dir
+D:/тпп/Lab4_Variant12_StudentA/A_Static/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/тпп/Lab4_Variant12_StudentA/A_Static/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

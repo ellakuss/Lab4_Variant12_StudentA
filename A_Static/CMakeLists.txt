@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(A_Static LANGUAGES CXX)
+add_library(CombinatoricsStatic STATIC src/Combinatorics.cpp)
+target_include_directories(CombinatoricsStatic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_compile_features(CombinatoricsStatic PUBLIC cxx_std_20)
+add_executable(StaticTest main.cpp)
+target_link_libraries(StaticTest PRIVATE CombinatoricsStatic)
